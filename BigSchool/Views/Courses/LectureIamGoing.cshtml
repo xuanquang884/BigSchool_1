@@ -1,8 +1,11 @@
 ﻿@model IEnumerable<BigSchool.Models.Course>
+
 @{
-    ViewBag.Title = "Attending";
+    ViewBag.Title = "LectureIamGoing";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+<h2>LectureIamGoing</h2>
 
 <div class="row">
     <ul class="course">
@@ -13,16 +16,19 @@
                     <div class="month">
                         @course.DateTime.ToString("MM")
                     </div>
+
                     <div class="day">
                         @course.DateTime.ToString("dd")
                     </div>
                 </div>
+
                 <div class="details">
+
                     <span class="lecture">@course.LectureName</span>
+                    <br />
                     <span class="category">@course.Category.Name</span>
                 </div>
             </li>
-            
         }
     </ul>
 </div>
